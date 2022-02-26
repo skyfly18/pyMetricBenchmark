@@ -7,8 +7,10 @@ def makeOrdner(home):
     try:
         os.mkdir(home)
         globeljarsname = "globaljars"
+        csvfile = "ergebniss"
         globeljars = os.path.join(home,globeljarsname)
         os.mkdir(globeljars)
+        os.mkdir(os.path.join(home,csvfile))
         return True
     except:
         return False
