@@ -6,7 +6,10 @@ def entrypoint() -> None:
 
 
 if __name__ == '__main__':
-    path = os.path.expanduser('~\Documents')
+    homename = "BenchmarkGroup5"
+    path = os.path.expanduser('~')
     print(path)
-    download.makeOrdner(path)
+    home = os.path.join(path, homename)
+    download.makeOrdner(home)
+    download.download_init(home)
     benchmarkGroup5.benchmarkGroup5()
