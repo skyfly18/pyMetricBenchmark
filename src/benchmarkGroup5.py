@@ -136,6 +136,8 @@ def benchmarkGroup5(fatjar, home, messungen):
     liniendiagramm.allbenchmarklinie(vrefglobal, vdglobal, wmcglobal, loopglobal, allglobaljarsname, "Global-Benchmark",
                                      messungen, globaljargroesse, "Diagramm aller Metriken der Gruppe 5")
 
+    boxplot.boxplotallmetrics(vrefglobal, wmcglobal, loopglobal, vdglobal, allglobaljarsname, "boxplotallmetrics", messungen, "Boxplot aller Metrics Gemeinsamer Benchmark")
+
     # Speziale Analyse von vref mit Argumente auf Global benchmark
     print("------------Beginne auswertung mit speziellen argumente auf den gemeinsammen Benchmark---------------------")
     vrefglobalStandL = pd.DataFrame(columns=allglobaljarsname)
@@ -185,6 +187,7 @@ def benchmarkGroup5(fatjar, home, messungen):
         subfatjar.runMultiFile(fatjar, multifilespring)
         df2 = pd.read_csv('performance-report.csv')
         inStDataframm(spring, df2, springjarsname)
+    liniendiagramm.multifilelinie(guava,spring,guavajarsname, springjarsname, "multifile", messungen, guavagrosse, springgroesse, "Multifile Analysis")
 
     print("-----------------------Beginne Auswerung des Benchmarks der Gruppe-------------------------------")
     # Einrichtung der benötigten Variablen
@@ -224,6 +227,8 @@ def benchmarkGroup5(fatjar, home, messungen):
     liniendiagramm.allbenchmarklinie(vrefgruppe5, vdgruppe5, wmcgruppe5, loopgruppe5, gruppe5jarsname,
                                      "Gruppe5-Benchmark",
                                      messungen, gruppe5jargroesse, "Diagramm aller Metriken der Gruppe 5")
+
+    boxplot.boxplotallmetrics(vrefgruppe5, wmcgruppe5, loopgruppe5, vdgruppe5, gruppe5jarsname, "boxplotallmetricsgruppe5", messungen, "Boxplot aller Metrics Gruppe5 Benchmark")
 
     # Speziale Analyse von vref mit Argumente auf denn Gruppe5 benchmark
     print("------------Beginne auswertung mit speziellen argumente auf den Gruppe5 Benchmark---------------------")

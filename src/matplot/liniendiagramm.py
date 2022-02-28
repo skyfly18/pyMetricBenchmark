@@ -18,9 +18,10 @@ def simpleline(data, jarname, namebild, messsungen, jardict, title):
     fig.set_figheight(10)
     plt.plot(*zip(*listxy), label=title)
     plt.xlabel("Größe der jars in kb")
+    plt.ylabel("Zeit messung")
     plt.legend(title=osinfos.system_infos(messsungen), loc='upper left')
     plt.title(title)
-    plt.ylabel("Zeit messung")
+
     plt.savefig(namebild + ".png")
     plt.close()
 
@@ -57,9 +58,10 @@ def allbenchmarklinie(vref, vdec, wmc, loop, jarname, namebild, messsungen, jard
     plt.plot(*zip(*listloop), label="Metrik Loop")
     plt.plot(*zip(*listwmc), label="Metrik Wmc")
     plt.xlabel("Größe der jars in kb")
+    plt.ylabel("Zeit messung")
     plt.legend(title=osinfos.system_infos(messsungen), loc='upper left')
     plt.title(title)
-    plt.ylabel("Zeit messung")
+
     plt.savefig(namebild + ".png")
     plt.close()
 
@@ -84,9 +86,10 @@ def scatterdiagramm(data, jarname, namebild, messsungen, jardict, title):
     y_pred = linear_regressor.predict(np_listx)
     plt.plot(listx, y_pred)
     plt.xlabel("Größe der jars in kb")
+    plt.ylabel("Zeit messung")
     plt.legend(title=osinfos.system_infos(messsungen), loc='upper left')
     plt.title(title)
-    plt.ylabel("Zeit messung")
+
     plt.savefig(namebild + ".png")
     plt.close()
 
@@ -123,8 +126,36 @@ def allvreflinie(vref, vrefInfo, vrefStAndL, vrefAllArgs, jarname, namebild, mes
     plt.plot(*zip(*listvrefAll), label="Vref Alle Argumente")
     plt.plot(*zip(*listvrefSt), label="Vref Store And Load Argument")
     plt.xlabel("Größe der jars in kb")
+    plt.ylabel("Zeit messung")
     plt.legend(title=osinfos.system_infos(messsungen), loc='upper left')
     plt.title(title)
-    plt.ylabel("Zeit messung")
+
     plt.savefig(namebild + ".png")
     plt.close()
+
+    def multifilelinie(guava, spring, jarnameguava, jarnamespring, namebild, messsungen, jardictguava, jardictspring, title):
+        for file in jarname:
+            guava[file] = guava[file].astype(float)
+            spring[file] = spring[file].astype(float)
+
+        summulti1 = guava.sum() / messsungen
+        summulti2 = spring.sum() / messsungen
+        multi1list = []
+        listmulti2 = []
+        for name in jarnameguava:
+            multi1list.append((jardictguava[name], summulti1[name]))
+        for name in jarnamespring:
+            listmulti2.append((jardictspring[name], summulti2[name]))
+        multi1list.sort(key=lambda tup: tup[0])
+        listmulti2.sort(key=lambda tup: tup[0])
+        fig = plt.figure()
+        fig.set_figwidth(10)
+        fig.set_figheight(10)
+        plt.plot(*zip(*multi1list), label="Guava")
+        plt.plot(*zip(*listmulti2), label="Spring")
+        plt.xlabel("Größe der jars in kb")
+        plt.ylabel("Zeit messung")
+        plt.legend(title=osinfos.system_infos(messsungen), loc='upper left')
+        plt.title(title)
+        plt.savefig(namebild + ".png")
+        plt.close()
