@@ -4,7 +4,7 @@ from io import StringIO
 from cpuinfo import get_cpu_info
 import subprocess
 
-
+# Erstellt einen String mit Infos über dem ausführend PC
 def system_infos(messungen):
     uname = platform.uname()
     infos = StringIO()

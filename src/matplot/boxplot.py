@@ -1,7 +1,9 @@
 import matplotlib.pyplot as plt
 from src.fatjar import osinfos
+import pandas as pd
 
 
+# Erstellt boxplot für jeden einzelnen Jar
 def boxplotD(data, jarname, namebild, messsungen, title):
     for file in jarname:
         data[file] = data[file].astype(float)
@@ -27,7 +29,7 @@ def boxplotD(data, jarname, namebild, messsungen, title):
         zahl += 1
         i += 1
 
-
+# Erstellt einen Boxplot wo alle Metriken gezeigt werden
 def boxplotallmetrics(vref, wmc, loop, vdec, jarname, namebild, messsungen, title):
     for file in jarname:
         vref[file] = vref[file].astype(float)
@@ -41,11 +43,10 @@ def boxplotallmetrics(vref, wmc, loop, vdec, jarname, namebild, messsungen, titl
     fig = plt.figure()
     fig.set_figwidth(18)
     fig.set_figheight(8)
-    vref =sumvref.box()
-    vref.plot(xticks='VREF')
-    sumwmc.plot(xticks='WMC').box()
-    sumloop.plot.box(xticks='Loop')
-    sumvdec.plot.box(xticks='VDEC')
+    df = pd.concat([sumvref, sumvdec, sumloop, sumwmc], axis=1)
+    df.columns =['VREF', 'VDEC','LOOP', 'WMC']
+    df_plot = df.boxplot()
+    df_plot.plot()
     plt.ylabel("Zeit messung")
     plt.legend(title=osinfos.system_infos(messsungen), loc="upper left")
     plt.title(title)
