@@ -25,7 +25,7 @@ https://repo.maven.apache.org/maven2/org/jsoup/jsoup/1.14.3/jsoup-1.14.3.jar
 # jersey-core, 427K, 307, 1883 loops 291 variables 5933 wmc 3143 local 5%
 https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-core/1.19.4/jersey-core-1.19.4.jar
 # mariadb-client, 555K, 286, 3146 loops 344 variables 9448 wmc 6299 local 7%
-https://repo.maven.apache.org/maven2/org/mariadb/jdbc/mariadb-java-client/3.0.3/mariadb-java-client-3.0.3.jar	
+https://repo.maven.apache.org/maven2/org/mariadb/jdbc/mariadb-java-client/3.0.3/mariadb-java-client-3.0.3.jar
 # joda-time, 630K, 247, 4486 loops 211 variables 1051 wmc 6616 local 100%
 https://repo.maven.apache.org/maven2/joda-time/joda-time/2.10.13/joda-time-2.10.13.jar
 # caffeine, 698K, 784, 6639 loops 84 variables 6499 wmc 8106 local 81%
