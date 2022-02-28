@@ -1,4 +1,4 @@
-from pyMetricBenchmark import benchmarkGroup5
+from pyMetricBenchmark.benchmarkGroup5 import benchmarkGroup5
 import os
 from pyMetricBenchmark.datei import download
 import sys
@@ -6,12 +6,13 @@ import sys
 
 def entrypoint() -> None:
     if len(sys.argv) == 4:
-        if os.path.isdir(sys.argv[1]): raise Exception("Ein vorhandener Ordner")
         if not os.path.isfile(sys.argv[2]): raise Exception("Keine jar file")
         if int(sys.argv[3]) <= 0: raise Exception("Anzahl der wiederholungen unter 0")
-        home = sys.argv[1]
+        homepfad = sys.argv[1]
         fatjar = sys.argv[2]
         messungen = sys.argv[3]
+        homename = "BenchmarkGroup5"
+        home = os.path.join(homepfad, homename)
         download.makeordner(home)
         download.download_init(home)
         benchmarkGroup5.benchmarkGroup5(fatjar, home, messungen)

@@ -22,7 +22,8 @@ Die Python abhängigkeiten sind
 
 ## Ausführen
 
-Das Skript lässt sich
+Das Skript lässt sich wie folgt ausführen.
+
 
 
 ## Ergebnisse
