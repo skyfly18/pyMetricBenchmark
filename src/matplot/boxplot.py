@@ -1,9 +1,8 @@
-import pandas as pd
 import matplotlib.pyplot as plt
 from src.fatjar import osinfos
 
 
-def boxplotD(data, jarname, namebild, messsungen,title):
+def boxplotD(data, jarname, namebild, messsungen,title, javabefehl):
     for file in jarname:
         data[file] = data[file].astype(float)
     i = 0
@@ -19,8 +18,9 @@ def boxplotD(data, jarname, namebild, messsungen,title):
         fig.set_figheight(8)
         boxplotGH = data.boxplot(column=list)
         boxplotGH.plot()
-        plt.legend(title=osinfos.system_infos(messsungen), loc="upper left")
+        plt.legend(title=osinfos.system_infos(messsungen) + javabefehl, loc="upper left")
         plt.title(title)
+        plt.ylabel("Zeit messung")
         plt.savefig(namebild + str(zahl) + ".png")
         plt.close()
         zahl += 1
