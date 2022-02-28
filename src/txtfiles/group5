@@ -1,0 +1,70 @@
+# jnr-unixsocket, 48K, 30, 285 loops 4 variables 587 wmc 390 local 9%
+https://repo.maven.apache.org/maven2/com/github/jnr/jnr-unixsocket/0.38.17/jnr-unixsocket-0.38.17.jar
+# commons-email, 54K, 21, 243 loops 17 variables 767 wmc 463 local 0%
+https://repo.maven.apache.org/maven2/org/apache/commons/commons-email/1.5/commons-email-1.5.jar
+# jmustache, 84K, 59, 242 loops 21 variables 690 wmc 366 local 3%
+https://repo.maven.apache.org/maven2/com/samskivert/jmustache/1.15/jmustache-1.15.jar
+# junit, 119K, 100, 591 loops 21 variables 1507 wmc 753 local 5%
+https://repo.maven.apache.org/maven2/junit/junit/3.8.1/junit-3.8.1.jar
+# maven-core, 149K, 67, 424 loops 83 variables 1872 wmc 988 local 2%
+https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.jar
+# commons-crypto, 163K, 52, 472 loops 31 variables 1232 wmc 653 local 13%
+https://repo.maven.apache.org/maven2/org/apache/commons/commons-crypto/1.1.0/commons-crypto-1.1.0.jar
+# javax-persistence, 199K, 213, 1094 loops 2 variables 404 wmc 307 local 55%
+https://repo.maven.apache.org/maven2/org/eclipse/persistence/javax.persistence/2.2.1/javax.persistence-2.2.1.jar
+# google-truth, 238K, 163, 1036 loops 123 variables 2698 wmc 2033 local 5%
+https://repo.maven.apache.org/maven2/com/google/truth/truth/1.1.3/truth-1.1.3.jar
+# ostrich, 344K, 319, 2640 loops 5 variables 3123 wmc 3098 local 49%
+https://repo.maven.apache.org/maven2/com/twitter/ostrich_2.12/9.27.0/ostrich_2.12-9.27.0.jar
+# log4j, 350K, 253, 1737 loops 91 variables 4673 wmc 2633 local 13%
+https://repo.maven.apache.org/maven2/log4j/log4j/1.2.12/log4j-1.2.12.jar
+# jackson-core, 366K, 127, 2613 loops 291 variables 7419 wmc 6187 local 4%
+https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.13.1/jackson-core-2.13.1.jar
+# jsoup, 414K, 259, 1963 loops 227 variables 4840 wmc 3873 local 4%
+https://repo.maven.apache.org/maven2/org/jsoup/jsoup/1.14.3/jsoup-1.14.3.jar
+# jersey-core, 427K, 307, 1883 loops 291 variables 5933 wmc 3143 local 5%
+https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-core/1.19.4/jersey-core-1.19.4.jar
+# mariadb-client, 555K, 286, 3146 loops 344 variables 9448 wmc 6299 local 7%
+https://repo.maven.apache.org/maven2/org/mariadb/jdbc/mariadb-java-client/3.0.3/mariadb-java-client-3.0.3.jar	
+# joda-time, 630K, 247, 4486 loops 211 variables 1051 wmc 6616 local 100%
+https://repo.maven.apache.org/maven2/joda-time/joda-time/2.10.13/joda-time-2.10.13.jar
+# caffeine, 698K, 784, 6639 loops 84 variables 6499 wmc 8106 local 81%
+https://repo.maven.apache.org/maven2/com/github/ben-manes/caffeine/caffeine/3.0.5/caffeine-3.0.5.jar
+# httpclient, 763K, 470, 3109 loops 190 variables 9118 wmc 5159 local 4%
+https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar
+# thymeleaf, 871K, 574, 4371 loops 680 variables 14479 wmc 8200 local 4%
+https://repo.maven.apache.org/maven2/org/thymeleaf/thymeleaf/3.1.0.M1/thymeleaf-3.1.0.M1.jar
+# aws-sdk, 1017K, 876, 5386 loops 233 variables 11816 wmc 7020 local 10%
+https://repo.maven.apache.org/maven2/com/amazonaws/aws-java-sdk-core/1.12.150/aws-java-sdk-core-1.12.150.jar
+# PostgreSQL JDBC Driver, 1.0 MB loops 473 variables 12882 wmc 10037 local 5%
+https://repo1.maven.org/maven2/org/postgresql/postgresql/42.3.2/postgresql-42.3.2.jar
+# GPars, 1.3 MB loops 572 variables 18205 wmc 9767 local 27%
+https://repo1.maven.org/maven2/org/codehaus/gpars/gpars/1.2.1/gpars-1.2.1.jar
+# EclipseLink JPA, 1.4 MB loops 573 variables 18329 wmc 13105 local 3%
+https://repo1.maven.org/maven2/org/eclipse/persistence/org.eclipse.persistence.jpa/3.1.0-M1/org.eclipse.persistence.jpa-3.1.0-M1.jar
+# Kotlin Stdlib, 1.4 MB loops 2278 variables 27020 wmc 16881 local 14%
+https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.5.31/kotlin-stdlib-1.5.31.jar
+# Spring Data MongoDB Core, 2.0 MB loops 272 variables 22491 wmc 15729 local 31%
+https://repo1.maven.org/maven2/org/springframework/data/spring-data-mongodb/3.3.1/spring-data-mongodb-3.3.1.jar
+# JGroups, 2.1 MB loops 1514 variables 30898 wmc 24135 local 30%
+https://repo1.maven.org/maven2/org/jgroups/jgroups/5.2.0.Final/jgroups-5.2.0.Final.jar
+# spring-core, 1.5M, 1281, 8149 loops 888 variables 19920 wmc 14091 local 19%
+https://repo.maven.apache.org/maven2/org/springframework/spring-core/5.3.15/spring-core-5.3.15.jar
+# hsqldb, 1.6M, 664, 11597 loops 2295 variables 7412 32791 local 100%
+https://repo.maven.apache.org/maven2/org/hsqldb/hsqldb/2.6.1/hsqldb-2.6.1.jar
+# h2, 2.5M, 1083, 13149 loops 2330 variables 5783 wmc 34908 local 100%
+https://repo.maven.apache.org/maven2/com/h2database/h2/2.1.210/h2-2.1.210.jar
+# tomcat-core, 3.3M, 1515, 16049 loops 1930 variables 41547 wmc 30735 local 15%
+https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.0-M10/tomcat-embed-core-10.1.0-M10.jar
+#hadoop core, 4.0M, loops 2523 variables 56894 wmc 30870 local 5%
+https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.2.1/hadoop-core-1.2.1.jar
+#zio 4.7M loops 341 variables 110121 wmc 75821 local 54%
+https://repo1.maven.org/maven2/dev/zio/zio_3/2.0.0-RC2/zio_3-2.0.0-RC2.jar
+#Bouncy Castle Provider 5.6M loops 3642 variables 8595 wmc 35629 local 100%
+https://repo1.maven.org/maven2/org/bouncycastle/bcprov-jdk15on/1.70/bcprov-jdk15on-1.70.jar
+#Scala Library 5.7M loops 2156 variables 100215 wmc 64278 local 17%
+https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.8/scala-library-2.13.8.jar
+#Cats Core 6.4M loop 104 variables 225266 wmc 63854 local 25%
+https://repo1.maven.org/maven2/org/typelevel/cats-core_3/2.7.0/cats-core_3-2.7.0.jar
+#Spark project Core 10.4M loops 1612 variables 139480 wmc 130907 local 47%
+https://repo1.maven.org/maven2/org/apache/spark/spark-core_2.13/3.2.1/spark-core_2.13-3.2.1.jar
