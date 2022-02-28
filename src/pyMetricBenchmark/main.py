@@ -1,6 +1,6 @@
-import benchmarkGroup5
+from pyMetricBenchmark import benchmarkGroup5
 import os
-from datei import download
+from pyMetricBenchmark.datei import download
 import sys
 
 

@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from src.fatjar import osinfos
+from pyMetricBenchmark.fatjar import osinfos
 import numpy as np
 from sklearn.linear_model import LinearRegression
 

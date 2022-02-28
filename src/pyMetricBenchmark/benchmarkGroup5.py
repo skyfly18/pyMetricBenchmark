@@ -1,8 +1,10 @@
 import os
 import pandas as pd
-from src.matplot import boxplot, liniendiagramm, balkenplot
-from src.datei import download
-from src.fatjar import subfatjar
+from pyMetricBenchmark.matplot import boxplot, liniendiagramm
+from pyMetricBenchmark.matplot import balkenplot
+from pyMetricBenchmark.datei import download
+from pyMetricBenchmark.fatjar import subfatjar
+
 
 # Funktionen um die Daten der Performace csv in eigenständige Dataframm zu ändern
 # Im column steht die jar file namen
@@ -187,7 +189,7 @@ def benchmarkGroup5(fatjar, home, messungen):
         subfatjar.runMultiFile(fatjar, multifilespring)
         df2 = pd.read_csv('performance-report.csv')
         inStDataframm(spring, df2, springjarsname)
-    liniendiagramm.multifilelinie(guava,spring,guavajarsname, springjarsname, "multifile", messungen, guavagrosse, springgroesse, "Multifile Analysis")
+    liniendiagramm.multifilelinie(guava, spring, guavajarsname, springjarsname, "multifile", messungen, guavagrosse, springgroesse, "Multifile Analysis")
 
     print("-----------------------Beginne Auswerung des Benchmarks der Gruppe-------------------------------")
     # Einrichtung der benötigten Variablen

@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
-from src.fatjar import osinfos
-import numpy as np
+from pyMetricBenchmark.fatjar import osinfos
 
 
 def balkenVref(vref, vrefInfo, vrefStAndL, vrefAllArgs, jarname, namebild, messsungen, title):
