@@ -109,7 +109,7 @@ def benchmarkGroup5(fatjar, home, messungen):
     wmcglobal = pd.DataFrame(columns=allglobaljarsname)
     loopglobal = pd.DataFrame(columns=allglobaljarsname)
     # Analysis der gemeinsames Benchmark
-    print("---------Beginne auswertung des gemeinsamen Benchmark-------------")
+    print("---------Beginne Auswertung des gemeinsamen Benchmark-------------")
     for i in range(messungen):
         subfatjar.runAllSingle(fatjar, globeljars)
         df = pd.read_csv('performance-report.csv')
@@ -122,16 +122,16 @@ def benchmarkGroup5(fatjar, home, messungen):
     boxplot.boxplotD(loopglobal, allglobaljarsname, "loopglobalboxplot", messungen, "Loop Global")
     boxplot.boxplotD(vdglobal, allglobaljarsname, "vdecglobalboxplot", messungen, "Vdec Global")
     liniendiagramm.simpleline(vrefglobal, allglobaljarsname, "vrefgloballinien", messungen, globaljargroesse, "Vref")
-    liniendiagramm.scatterdiagramm(vrefglobal, allglobaljarsname, "vrefglobalregrasson", messungen, globaljargroesse,
+    liniendiagramm.scatterdiagramm(vrefglobal, allglobaljarsname, "vrefglobalregression", messungen, globaljargroesse,
                                    "Vref")
     liniendiagramm.simpleline(vdglobal, allglobaljarsname, "vdecgloballinien", messungen, globaljargroesse, "Vdec")
-    liniendiagramm.scatterdiagramm(vdglobal, allglobaljarsname, "vdecglobalregrasson", messungen, globaljargroesse,
+    liniendiagramm.scatterdiagramm(vdglobal, allglobaljarsname, "vdecglobalregression", messungen, globaljargroesse,
                                    "Vdec")
     liniendiagramm.simpleline(wmcglobal, allglobaljarsname, "wmcgloballinien", messungen, globaljargroesse, "Wmc")
-    liniendiagramm.scatterdiagramm(wmcglobal, allglobaljarsname, "wmcglobalregrasson", messungen, globaljargroesse,
+    liniendiagramm.scatterdiagramm(wmcglobal, allglobaljarsname, "wmcglobalregression", messungen, globaljargroesse,
                                    "Wmc")
     liniendiagramm.simpleline(loopglobal, allglobaljarsname, "loopgloballinien", messungen, globaljargroesse, "Loop")
-    liniendiagramm.scatterdiagramm(loopglobal, allglobaljarsname, "loopglobalregrasson", messungen, globaljargroesse,
+    liniendiagramm.scatterdiagramm(loopglobal, allglobaljarsname, "loopglobalregression", messungen, globaljargroesse,
                                    "Loop")
     liniendiagramm.allbenchmarklinie(vrefglobal, vdglobal, wmcglobal, loopglobal, allglobaljarsname, "Global-Benchmark",
                                      messungen, globaljargroesse, "Diagramm aller Metriken der Gruppe 5")
@@ -139,7 +139,7 @@ def benchmarkGroup5(fatjar, home, messungen):
     boxplot.boxplotallmetrics(vrefglobal, wmcglobal, loopglobal, vdglobal, allglobaljarsname, "boxplotallmetrics", messungen, "Boxplot aller Metrics Gemeinsamer Benchmark")
 
     # Speziale Analyse von vref mit Argumente auf Global benchmark
-    print("------------Beginne auswertung mit speziellen argumente auf den gemeinsammen Benchmark---------------------")
+    print("------------Beginne auswertung mit speziellen argumente auf dem gemeinsamen Benchmark---------------------")
     vrefglobalStandL = pd.DataFrame(columns=allglobaljarsname)
     vrefglobalVa = pd.DataFrame(columns=allglobaljarsname)
     vrefglobalAllArg = pd.DataFrame(columns=allglobaljarsname)
@@ -154,13 +154,13 @@ def benchmarkGroup5(fatjar, home, messungen):
         subfatjar.runAllArgument(fatjar, globeljars)
         df3 = pd.read_csv('performance-report.csv')
         vrefDataframm(vrefglobalAllArg, df3, allglobaljarsname)
-    liniendiagramm.scatterdiagramm(vrefglobalAllArg, allglobaljarsname, "vrefargsglobalregrasson", messungen,
+    liniendiagramm.scatterdiagramm(vrefglobalAllArg, allglobaljarsname, "vrefargsglobalregression", messungen,
                                    globaljargroesse,
                                    "Vref all Argumente")
-    liniendiagramm.scatterdiagramm(vrefglobalVa, allglobaljarsname, "vrefinfoglobalregrasson", messungen,
+    liniendiagramm.scatterdiagramm(vrefglobalVa, allglobaljarsname, "vrefinfoglobalregression", messungen,
                                    globaljargroesse,
                                    "Vref Argument Info")
-    liniendiagramm.scatterdiagramm(vrefglobalStandL, allglobaljarsname, "vrefstandlglobalregrasson", messungen,
+    liniendiagramm.scatterdiagramm(vrefglobalStandL, allglobaljarsname, "vrefstandlglobalregression", messungen,
                                    globaljargroesse,
                                    "Vref Argument StoreAndLoad")
     liniendiagramm.allvreflinie(vrefglobal, vrefglobalVa, vrefglobalStandL, vrefglobalAllArg, allglobaljarsname,
@@ -213,16 +213,16 @@ def benchmarkGroup5(fatjar, home, messungen):
     boxplot.boxplotD(loopgruppe5, gruppe5jarsname, "loopgruppe5boxplot", messungen, "Loop Gruppe5")
     boxplot.boxplotD(vdgruppe5, gruppe5jarsname, "vdecgruppe5boxplot", messungen, "Vdec Gruppe5")
     liniendiagramm.simpleline(vrefgruppe5, gruppe5jarsname, "vrefgruppe5linien", messungen, gruppe5jargroesse, "Vref")
-    liniendiagramm.scatterdiagramm(vrefgruppe5, gruppe5jarsname, "vrefgruppe5regrasson", messungen, gruppe5jargroesse,
+    liniendiagramm.scatterdiagramm(vrefgruppe5, gruppe5jarsname, "vrefgruppe5regression", messungen, gruppe5jargroesse,
                                    "Vref")
     liniendiagramm.simpleline(vdgruppe5, gruppe5jarsname, "vdecgruppe5linien", messungen, gruppe5jargroesse, "Vdec")
-    liniendiagramm.scatterdiagramm(vdgruppe5, gruppe5jarsname, "vdecgruppe5regrasson", messungen, gruppe5jargroesse,
+    liniendiagramm.scatterdiagramm(vdgruppe5, gruppe5jarsname, "vdecgruppe5regression", messungen, gruppe5jargroesse,
                                    "Vdec")
     liniendiagramm.simpleline(wmcgruppe5, gruppe5jarsname, "wmcgruppe5linien", messungen, gruppe5jargroesse, "Wmc")
-    liniendiagramm.scatterdiagramm(wmcgruppe5, gruppe5jarsname, "wmcgruppe5regrasson", messungen, gruppe5jargroesse,
+    liniendiagramm.scatterdiagramm(wmcgruppe5, gruppe5jarsname, "wmcgruppe5regression", messungen, gruppe5jargroesse,
                                    "Wmc")
     liniendiagramm.simpleline(loopgruppe5, gruppe5jarsname, "loopgruppe5linien", messungen, gruppe5jargroesse, "Loop")
-    liniendiagramm.scatterdiagramm(loopgruppe5, gruppe5jarsname, "loopgruppe5regrasson", messungen, gruppe5jargroesse,
+    liniendiagramm.scatterdiagramm(loopgruppe5, gruppe5jarsname, "loopgruppe5regression", messungen, gruppe5jargroesse,
                                    "Loop")
     liniendiagramm.allbenchmarklinie(vrefgruppe5, vdgruppe5, wmcgruppe5, loopgruppe5, gruppe5jarsname,
                                      "Gruppe5-Benchmark",
@@ -231,7 +231,7 @@ def benchmarkGroup5(fatjar, home, messungen):
     boxplot.boxplotallmetrics(vrefgruppe5, wmcgruppe5, loopgruppe5, vdgruppe5, gruppe5jarsname, "boxplotallmetricsgruppe5", messungen, "Boxplot aller Metrics Gruppe5 Benchmark")
 
     # Speziale Analyse von vref mit Argumente auf denn Gruppe5 benchmark
-    print("------------Beginne auswertung mit speziellen argumente auf den Gruppe5 Benchmark---------------------")
+    print("------------Beginne auswertung mit speziellen Argumenten auf dem Gruppe5 Benchmark---------------------")
     vrefgruppe5StandL = pd.DataFrame(columns=gruppe5jarsname)
     vrefgruppe5Va = pd.DataFrame(columns=gruppe5jarsname)
     vrefgruppe5AllArg = pd.DataFrame(columns=gruppe5jarsname)
@@ -246,13 +246,13 @@ def benchmarkGroup5(fatjar, home, messungen):
         subfatjar.runAllArgument(fatjar, group5jars)
         df3 = pd.read_csv('performance-report.csv')
         vrefDataframm(vrefgruppe5AllArg, df3, gruppe5jarsname)
-    liniendiagramm.scatterdiagramm(vrefgruppe5AllArg, gruppe5jarsname, "vrefargsgruppe5regrasson", messungen,
+    liniendiagramm.scatterdiagramm(vrefgruppe5AllArg, gruppe5jarsname, "vrefargsgruppe5regression", messungen,
                                    gruppe5jargroesse,
                                    "Vref all Argumente")
-    liniendiagramm.scatterdiagramm(vrefgruppe5Va, gruppe5jarsname, "vrefinfogruppe5regrasson", messungen,
+    liniendiagramm.scatterdiagramm(vrefgruppe5Va, gruppe5jarsname, "vrefinfogruppe5regression", messungen,
                                    gruppe5jargroesse,
                                    "Vref Argument Info")
-    liniendiagramm.scatterdiagramm(vrefgruppe5StandL, gruppe5jarsname, "vrefstandlgruppe5regrasson", messungen,
+    liniendiagramm.scatterdiagramm(vrefgruppe5StandL, gruppe5jarsname, "vrefstandlgruppe5regression", messungen,
                                    gruppe5jargroesse,
                                    "Vref Argument StoreAndLoad")
     liniendiagramm.allvreflinie(vrefgruppe5, vrefgruppe5Va, vrefgruppe5StandL, vrefgruppe5AllArg, gruppe5jarsname,
