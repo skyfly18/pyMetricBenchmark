@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 
 
-def simpleline(data, jarname, namebild, messsungen, jardict, title, javabefehl):
+def simpleline(data, jarname, namebild, messsungen, jardict, title):
     for file in jarname:
         data[file] = data[file].astype(float)
     sumdata = data.sum() / messsungen
@@ -18,14 +18,14 @@ def simpleline(data, jarname, namebild, messsungen, jardict, title, javabefehl):
     fig.set_figheight(10)
     plt.plot(*zip(*listxy), label=title)
     plt.xlabel("Größe der jars in kb")
-    plt.legend(title=osinfos.system_infos(messsungen) + javabefehl, loc='upper left')
+    plt.legend(title=osinfos.system_infos(messsungen), loc='upper left')
     plt.title(title)
     plt.ylabel("Zeit messung")
     plt.savefig(namebild + ".png")
     plt.close()
 
 
-def allbenchmarklinie(vref, vdec, wmc, loop, jarname, namebild, messsungen, jardict, title, javabefehl):
+def allbenchmarklinie(vref, vdec, wmc, loop, jarname, namebild, messsungen, jardict, title):
     for file in jarname:
         vref[file] = vref[file].astype(float)
         vdec[file] = vdec[file].astype(float)
@@ -57,14 +57,14 @@ def allbenchmarklinie(vref, vdec, wmc, loop, jarname, namebild, messsungen, jard
     plt.plot(*zip(*listloop), label="Metrik Loop")
     plt.plot(*zip(*listwmc), label="Metrik Wmc")
     plt.xlabel("Größe der jars in kb")
-    plt.legend(title=osinfos.system_infos(messsungen) + javabefehl, loc='upper left')
+    plt.legend(title=osinfos.system_infos(messsungen), loc='upper left')
     plt.title(title)
     plt.ylabel("Zeit messung")
     plt.savefig(namebild + ".png")
     plt.close()
 
 
-def scatterdiagramm(data, jarname, namebild, messsungen, jardict, title, javabefehl):
+def scatterdiagramm(data, jarname, namebild, messsungen, jardict, title):
     fig = plt.figure()
     fig.set_figwidth(20)
     fig.set_figheight(16)
@@ -84,7 +84,7 @@ def scatterdiagramm(data, jarname, namebild, messsungen, jardict, title, javabef
     y_pred = linear_regressor.predict(np_listx)
     plt.plot(listx, y_pred)
     plt.xlabel("Größe der jars in kb")
-    plt.legend(title=osinfos.system_infos(messsungen) + javabefehl, loc='upper left')
+    plt.legend(title=osinfos.system_infos(messsungen), loc='upper left')
     plt.title(title)
     plt.ylabel("Zeit messung")
     plt.savefig(namebild + ".png")

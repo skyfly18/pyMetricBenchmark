@@ -3,24 +3,20 @@ import importlib.resources as res
 import pathlib as path
 from urllib import request
 
-
-def makeOrdner(home):
-    try:
-        os.mkdir(home)
-        globeljarsname = "globaljars"
-        csvfile = "ergebniss"
-        group5 = "group5"
-        multifileg = "multifileguava"
-        multifilesp = "multifilespring"
-        globeljars = os.path.join(home, globeljarsname)
-        os.mkdir(globeljars)
-        os.mkdir(os.path.join(home, csvfile))
-        os.mkdir(os.path.join(home, group5))
-        os.mkdir(os.path.join(home, multifileg))
-        os.mkdir(os.path.join(home, multifilesp))
-        return True
-    except:
-        return False
+# Erstelle die Ordner wo gearbeitet werden
+def makeordner(home):
+    os.mkdir(home)
+    globeljarsname = "globaljars"
+    csvfile = "ergebniss"
+    group5 = "group5"
+    multifileg = "multifileguava"
+    multifilesp = "multifilespring"
+    globeljars = os.path.join(home, globeljarsname)
+    os.mkdir(globeljars)
+    os.mkdir(os.path.join(home, csvfile))
+    os.mkdir(os.path.join(home, group5))
+    os.mkdir(os.path.join(home, multifileg))
+    os.mkdir(os.path.join(home, multifilesp))
 
 
 def download(home):
@@ -35,9 +31,9 @@ def download(home):
                     request.urlretrieve(line, down)
 
 
+# Downloade alle datein die in den Textfiles stehen
 def download_init(home):
     pathhome = path.PurePath("./txtfiles")
-    print(pathhome)
     for filename in os.listdir(pathhome):
         jarfile = os.path.join(home, filename)
         jarfile2 = os.path.join(pathhome, filename)
@@ -48,13 +44,10 @@ def download_init(home):
                     jarname = filename.pop().rsplit('\n')
                     down = os.path.join(jarfile, jarname[0])
                     request.urlretrieve(line, down)
-            #         r = requests.get(line, allow_redirects=True)
-            #
-            #
-            #     open(down, 'wb').write(r.content)
 
 
-def datei_größe(jardir, jarname):
+# Berechne die jar größen
+def datei_groesse(jardir):
     jardict = {}
     for filename in os.listdir(jardir):
         jarpath = os.path.join(jardir, filename)
