@@ -6,7 +6,7 @@ import sys
 
 def entrypoint() -> None:
     if len(sys.argv) == 4:
-        if os.path.isdir(sys.argv[1]): raise Exception("Ein vorhanden Ordner")
+        if os.path.isdir(sys.argv[1]): raise Exception("Ein vorhandener Ordner")
         if not os.path.isfile(sys.argv[2]): raise Exception("Keine jar file")
         if int(sys.argv[3]) <= 0: raise Exception("Anzahl der wiederholungen unter 0")
         home = sys.argv[1]
