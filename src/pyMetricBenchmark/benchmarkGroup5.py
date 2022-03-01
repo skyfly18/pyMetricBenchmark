@@ -68,7 +68,6 @@ def vdDataframm(data, csvdata, jarsname):
     data.loc[len(data.index + 1)] = series
 
 def inStDataframm(data, csvdata, jarsname):
-    # csvindex=csvdata.loc
     dict = {}
     for i in range(len(csvdata)):
         file = csvdata.at[i, "File"]

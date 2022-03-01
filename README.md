@@ -21,11 +21,19 @@ Die Python abhängigkeiten sind
 ...
 
 ## Ausführen
+Einstellung wie wo die Datein gepeichert werden sollen und den Path zur Fatjar wird in der main.py angepasst.
+Die Einstellungen werden unter den Kommentare Einstellungen vorgenommen.
 
-Das Skript lässt sich wie folgt ausführen.
+Das Skript lässt sich wie folgt ausführen. 
+1: Konsole
+  - Öffnen sie die Konsole im Verzeichniss wo die main.py liegt. Dan geben sie denn Befehl python main.py an.
+2: Pycharm
+  - Öffnen sie das Projekt in Pycharm. Öffnen sie die main.py und führen diese in Pycharm aus.
+
+Beachtetn Sie das die abhängigkeiten installiert sind. Auch darf der Ordner "BenchmarkGroup5" im ausgewählten Verzeichniss nicht exiestieren. Sonst bricht das Programm mit einen Fehler meldung ab.
 
 
 
 ## Ergebnisse
 
-Die Ergebnisse liegen im Ordner Ergebnisse, dort liegt auch die performatscsv
+Die Ergebnisse liegen im Ordner Ergebnisse, dort liegt auch die performance-report.csv. Diese nicht öffen wenn das Programm läuft. In dieser Datei wird nichts gepeichert und wird während des Durchlauf des Programms mehrmals überschrieben.

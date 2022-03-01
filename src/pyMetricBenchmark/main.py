@@ -1,7 +1,7 @@
-from pyMetricBenchmark.benchmarkGroup5 import benchmarkGroup5
 import os
 from pyMetricBenchmark.datei import download
 import sys
+from pyMetricBenchmark.benchmarkGroup5 import benchmarkGroup5
 
 
 def entrypoint() -> None:
@@ -14,8 +14,8 @@ def entrypoint() -> None:
         homename = "BenchmarkGroup5"
         home = os.path.join(homepfad, homename)
         download.makeordner(home)
-        download.download_init(home)
-        benchmarkGroup5.benchmarkGroup5(fatjar, home, messungen)
+        download.download(home)
+        benchmarkGroup5(fatjar, home, messungen)
     else:
         print("Zu wenige Argumente")
 
@@ -25,9 +25,10 @@ if __name__ == '__main__':
     homename = "BenchmarkGroup5"  # Name des root Ordners wo das Skript daten speichert
     path = os.path.expanduser('~')  # Path wo der root Ordner liegen soll
     fatjar = os.path.expanduser('~/Dokumente/framework/analysis-application.jar')  # Pfad zur Fatjar der analysis
-    messungen = 1  # Anzahl der wiederholen der Messung
+    messungen = 10  # Anzahl der wiederholen der Messung
+    # Ende der Einstellungen
 
     home = os.path.join(path, homename)
     download.makeordner(home)
     download.download_init(home)
-    benchmarkGroup5.benchmarkGroup5(fatjar, home, messungen)
+    benchmarkGroup5(fatjar, home, messungen)
